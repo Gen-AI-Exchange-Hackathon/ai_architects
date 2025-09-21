@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --sidebar-width: 280px;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #111827;
+  color: #e2e8f0;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.chat-container {
+  flex: 1;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.chat-container.full-width {
+  flex: 2;
+}
+
+.input-panel-container {
+  flex-shrink: 0;
+  width: 400px;
+  height: 100%;
+  transition: all 0.3s ease;
+  z-index: 10;
+  background-color: #1f2937;
+}
+
+.input-panel-container.collapsed {
+  width: 60px;
+  cursor: pointer;
+}
+
+.dashboard-container {
+  flex: 1;
+  padding: 1rem;
+}
+
+.collapsed-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.collapse-icon {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.collapse-text {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  white-space: nowrap;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+

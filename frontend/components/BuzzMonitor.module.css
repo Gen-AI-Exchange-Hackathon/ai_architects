@@ -1,0 +1,11 @@
+.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    color: #9ca3af;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}

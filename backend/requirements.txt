@@ -1,0 +1,21 @@
+# Latest FastAPI with full Pydantic 2.x support
+fastapi>=0.116.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.6
+
+# Google Cloud Services - Modern versions
+google-cloud-storage>=2.10.0
+google-generativeai>=0.8.5
+
+# Modern Python dependencies
+pydantic>=2.0.0,<3.0.0
+httpx>=0.25.0
+aiofiles>=23.0.0
+requests>=2.28.0
+
+
+sqlalchemy==2.0.43
+pg8000==1.31.4
+python-docx==1.1.0
+anyio==4.10.0
+gunicorn==20.1.0

@@ -1,0 +1,388 @@
+/* Base styles for the sidebar container */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background-color: #1a202c;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #2d3748;
+  overflow-y: auto; /* ✅ make scrollable */
+  padding: 1.5rem 1rem;
+}
+
+/* Buttons with icons */
+.navLink,
+.sendButton,
+.inviteButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* ✅ spacing for icons */
+}
+
+/* Fix Send Meeting Details button overflow */
+.sendButton {
+  width: 100%; /* ✅ ensures it fits inside panel */
+  padding: 0.625rem 0.75rem;
+  background-color: #38a169;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+  box-sizing: border-box; /* ✅ avoids overflow */
+}
+
+/* User profile section */
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #2d3748;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #4a5568;
+}
+
+.username {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Main body of the sidebar */
+.sidebarBody {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+/* Navigation links */
+.mainNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin-bottom: 0.5rem;
+}
+
+.navLink {
+  display: flex;               /* ✅ flex for icon + text */
+  align-items: center;         /* ✅ vertical alignment */
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: transparent;
+  color: #cbd5e0;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+.navLink:hover {
+  background-color: #2d3748;
+  color: #fff;
+  border-color: #4a5568;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navItem.active .navLink {
+  background-image: linear-gradient(135deg, #4c51bf 0%, #667eea 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(76, 81, 191, 0.5);
+  border-color: #4c51bf;
+}
+
+/* Optional: keep icons consistent */
+.navLink svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+/* Search bar */
+.searchContainer {
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: 0.5rem;
+  color: #e2e8f0;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: #a0aec0;
+}
+
+/* Analysis history section */
+.chatHistory {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.historyTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.historyItem:hover {
+  background-color: #4a5568;
+}
+
+.historyItem.active {
+  background-image: linear-gradient(135deg, #4c51bf 0%, #667eea 100%);
+  box-shadow: 0 4px 14px rgba(76, 81, 191, 0.5);
+  border-color: #4c51bf;
+  height: 50px;
+}
+
+.historyItemContent {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.historyItemName {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileCount {
+  font-size: 0.8rem;
+  color: #a0aec0;
+}
+
+.emptyMessage {
+  font-style: italic;
+  color: #a0aec0;
+}
+
+/* Delete button styling */
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.5rem;
+  transition: color 0.2s;
+}
+
+.deleteButton:hover {
+  color: #bababa;
+}
+
+/* Footer section */
+.sidebarFooter {
+  padding-top: 1.5rem;
+  border-top: 1px solid #2d3748;
+}
+
+/* Meeting Form Styles */
+.meetingForm {
+  background-color: #2d3748;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #4a5568;
+}
+
+.formTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 0.75rem;
+}
+
+.formLabel {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #cbd5e0;
+  margin-bottom: 0.25rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: #1a202c;
+  border: 1px solid #4a5568;
+  border-radius: 0.375rem;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.formInput:focus {
+  border-color: #4c51bf;
+  box-shadow: 0 0 0 1px #4c51bf;
+}
+
+.formInput::placeholder {
+  color: #a0aec0;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column; /* ✅ stack vertically */
+  gap: 0.75rem;           /* ✅ space between date & time */
+}
+
+.formRow .formGroup {
+  flex: 1;
+}
+
+.sendButton {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  background-color: #38a169;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.sendButton:hover:not(:disabled) {
+  background-color: #2f855a;
+}
+
+.sendButton:disabled {
+  background-color: #4a5568;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.inviteButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #4c51bf;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.inviteButton:hover {
+  background-color: #434190;
+}
+
+/* Modal and overlay styling */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confirmModal {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  max-width: 400px;
+}
+
+.modalMessage {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modalButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.confirmButton {
+  background-color: #e53e3e;
+  color: #fff;
+  border: none;
+}
+
+.confirmButton:hover {
+  background-color: #c53030;
+}
+
+.cancelButton {
+  background-color: #4a5568;
+  color: #fff;
+  border: none;
+}
+
+.cancelButton:hover {
+  background-color: #2d3748;
+}
